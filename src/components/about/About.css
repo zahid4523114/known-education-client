@@ -1,0 +1,6 @@
+.about-us-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 100px;
+}
