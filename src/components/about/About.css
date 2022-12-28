@@ -4,3 +4,15 @@
   gap: 20px;
   margin-bottom: 100px;
 }
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

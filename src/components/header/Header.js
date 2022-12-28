@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div>
       <nav class="navbar sticky-top p-3 navbar-expand-lg bg-body-tertiary">
-        <div class="container">
+        <div class="container d-lg-flex justify-content-lg-center align-items-lg-center">
           <Link class="navbar-brand fs-4 fw-bold" href="#">
             Known
           </Link>
@@ -22,35 +22,40 @@ const Header = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav d-lg-flex justify-content-lg-center align-items-lg-center me-auto mb-2 mb-lg-0">
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" aria-current="page" href="#">
+                <Link
+                  to="/home"
+                  class="nav-link fw-bold"
+                  aria-current="page"
+                  href="#"
+                >
                   Home
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" href="#">
+                <Link to="/about" class="nav-link fw-bold" href="#">
                   About
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" href="#">
-                  Our Teachers
+                <Link to="/ourTeachers" class="nav-link fw-bold" href="#">
+                  Teachers
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" href="#">
+                <Link to="/courses" class="nav-link fw-bold" href="#">
                   Courses
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" href="#">
-                  Reviews
+                <Link to="/contact" class="nav-link fw-bold" href="#">
+                  Contact
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link class="nav-link fw-bold" href="#">
-                  Contact
+                <Link to="/contact" class="nav-link fw-bold" href="#">
+                  Log In
                 </Link>
               </li>
             </ul>
@@ -60,11 +65,11 @@ const Header = () => {
                 borderRadius: "50%",
                 fontSize: "20px",
               }}
-              className="text-white px-2 py-1"
+              className="text-white ms-lg-4 ms-0 px-2 py-1"
             >
               <BsTelephone></BsTelephone>
             </span>
-            <span class="navbar-text ms-2">+6836833639</span>
+            <span class="navbar-text ms-2">+8801734095414</span>
           </div>
         </div>
       </nav>

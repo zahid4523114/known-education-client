@@ -9,9 +9,13 @@ import { BsGithub } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div className="about-us-container container">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="about-us-container container"
+    >
       <div className="about-us">
-        <h1 className="mb-4">
+        <h1 className="my-4">
           Start your journey to a better life with online practical courses
         </h1>
         <div className="d-flex justify-content-center align-items-center">
@@ -69,7 +73,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <form className="user-form bg-light shadow-lg rounded-5 p-3">
+      <form className="user-form bg-light shadow-lg rounded-5 mt-3 p-3">
         <h2 className="my-3 fw-bold">Sign Up</h2>
         <div class="mb-3">
           <input
@@ -99,11 +103,11 @@ const About = () => {
           <p>Already have an account?</p>
         </Link>
         <button className="btn btn-primary  rounded-5">Get Started</button>
-        <div className="mx-auto w-25 mt-4">
-          <span className="fs-3">
+        <div className="d-flex justify-content-center mt-4">
+          <span className="fs-3 d-block">
             <FcGoogle></FcGoogle>
           </span>
-          <span className="ms-4 fs-3">
+          <span className="ms-4 d-block fs-3">
             <BsGithub></BsGithub>
           </span>
         </div>
