@@ -1,7 +1,11 @@
-.carousel-item {
-  width: 100%;
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.carousel-inner {
-  width: 50%;
-  margin: 0 auto;
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .course-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
 }

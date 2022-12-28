@@ -54,7 +54,7 @@ const Header = () => {
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link to="/contact" class="nav-link fw-bold" href="#">
+                <Link to="/logIn" class="nav-link fw-bold" href="#">
                   Log In
                 </Link>
               </li>

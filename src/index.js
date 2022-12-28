@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import UserContext from "./components/context/UserContext";
 // ..
 AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
@@ -20,7 +21,9 @@ AOS.init({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserContext>
+      <App />
+    </UserContext>
   </React.StrictMode>
 );
 

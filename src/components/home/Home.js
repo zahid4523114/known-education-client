@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -10,9 +11,11 @@ const Home = () => {
           Our online courses are designed to fit in your industry supporting
           all-around with latest technologies
         </p>
-        <button className="btn btn-success rounded-5  fs-5 text-white">
-          Discover more
-        </button>
+        <Link to="/courses">
+          <button className="btn btn-success rounded-5  fs-5 text-white">
+            Explore more
+          </button>
+        </Link>
       </div>
     </div>
   );

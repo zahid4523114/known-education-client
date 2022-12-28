@@ -6,7 +6,7 @@ const Contact = () => {
     <div
       data-aos="fade-zoom-out"
       style={{ backgroundColor: "#3F51B5" }}
-      className="w-100 min-vh-75 p-lg-5 p-md-4 p-3"
+      className="w-100 min-vh-75 my-5 p-lg-5 p-md-4 p-3"
     >
       <div className=" row col-12">
         <form className="col-lg-7 col-md-12 col-12">
