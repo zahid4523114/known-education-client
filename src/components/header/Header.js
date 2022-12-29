@@ -28,7 +28,7 @@ const Header = () => {
               <li class="ms-lg-5 nav-item">
                 <Link
                   to="/home"
-                  class="nav-link fw-bold"
+                  class="nav-link link-success fw-bold"
                   aria-current="page"
                   href="#"
                 >
@@ -36,34 +36,58 @@ const Header = () => {
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link to="/about" class="nav-link fw-bold" href="#">
+                <Link
+                  to="/about"
+                  class="nav-link link-success fw-bold "
+                  href="#"
+                >
                   About
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link to="/ourTeachers" class="nav-link fw-bold" href="#">
+                <Link
+                  to="/ourTeachers"
+                  class="nav-link link-success fw-bold"
+                  href="#"
+                >
                   Teachers
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link to="/courses" class="nav-link fw-bold" href="#">
+                <Link
+                  to="/courses"
+                  class="nav-link link-success fw-bold"
+                  href="#"
+                >
                   Courses
                 </Link>
               </li>
               <li class="ms-lg-5 nav-item">
-                <Link to="/contact" class="nav-link fw-bold" href="#">
+                <Link
+                  to="/contact"
+                  class="nav-link link-success fw-bold"
+                  href="#"
+                >
                   Contact
                 </Link>
               </li>
               {user?.email ? (
                 <li class="ms-lg-5 nav-item">
-                  <Link onClick={signOutUser} class="nav-link fw-bold" href="#">
+                  <Link
+                    onClick={signOutUser}
+                    class="nav-link link-success fw-bold"
+                    href="#"
+                  >
                     <span>Log Out</span>
                   </Link>
                 </li>
               ) : (
                 <li class="ms-lg-5 nav-item">
-                  <Link to="/logIn" class="nav-link fw-bold" href="#">
+                  <Link
+                    to="/logIn"
+                    class="nav-link link-success fw-bold"
+                    href="#"
+                  >
                     Log In
                   </Link>
                 </li>

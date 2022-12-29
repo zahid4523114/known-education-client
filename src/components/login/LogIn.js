@@ -36,7 +36,7 @@ const LogIn = () => {
       });
   };
   return (
-    <div className="row mx-auto col-12 p-lg-5 p-3">
+    <div className="row mx-auto col-12 d-flex flex-lg-row flex-md-column-reverse flex-column-reverse p-lg-5 p-3">
       <div className="col-lg-6 col-md-12 col-12">
         <form
           onSubmit={handleLogin}
@@ -88,7 +88,7 @@ const LogIn = () => {
         </form>
       </div>
       <div className="col-lg-6 col-md-12 col-12">
-        <img src={logo} className="img-fluid mt-5 d-lg-block d-none" alt="" />
+        <img src={logo} className="img-fluid mt-5" alt="" />
       </div>
     </div>
   );
