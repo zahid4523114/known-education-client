@@ -24,9 +24,10 @@ const OurTeachers = () => {
             <div class="card-body">
               <h4 class="card-title fw-bold">Mark Wilson</h4>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                I design and create websites.I am also responsible for the
+                site's technical aspects, such as its performance and capacity,
+                which are measures of a website's speed. and how much traffic
+                the site can.
               </p>
             </div>
             <div class="card-footer text-center">
@@ -39,9 +40,9 @@ const OurTeachers = () => {
             <div class="card-body">
               <h4 class="card-title fw-bold">Catherine</h4>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                The Graphic Designer job description includes the entire process
+                of defining requirements, visualizing and creating graphics
+                including illustrations, logos, layouts and photos.
               </p>
             </div>
             <div class="card-footer text-center">
@@ -53,9 +54,10 @@ const OurTeachers = () => {
             <div class="card-body">
               <h4 class="card-title fw-bold">Jessie Ca</h4>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                UX design is all about identifying and solving user problems; UI
+                design is all about creating intuitive, aesthetically-pleasing,
+                interactive interfaces. UX design usually comes first in the
+                product development.
               </p>
             </div>
             <div class="card-footer text-center">
@@ -67,9 +69,10 @@ const OurTeachers = () => {
             <div class="card-body">
               <h4 class="card-title fw-bold">Andrew Berti</h4>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Photography is the art, application, and practice of creating
+                durable images by recording light, either electronically by
+                means of an image sensor, or chemically by means of a
+                light-sensitive material.
               </p>
             </div>
             <div class="card-footer text-center">

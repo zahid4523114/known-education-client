@@ -6,8 +6,12 @@ import { BsGithub } from "react-icons/bs";
 import { AuthContext } from "../context/UserContext";
 
 const SignUp = () => {
-  const { registerUser, signInWithGoogle, signInWithGitHub } =
-    useContext(AuthContext);
+  const {
+    registerUser,
+    signInWithGoogle,
+    signInWithGitHub,
+    userProfileUpdate,
+  } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -25,6 +29,7 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         form.reset();
+        handleProfileUpdate(name, photo);
         navigate("/home");
         console.log(user);
       })
@@ -32,6 +37,18 @@ const SignUp = () => {
         console.log(error);
       });
   };
+
+  const handleProfileUpdate = (name, image) => {
+    const userData = { displayName: name, photoURL: image };
+    userProfileUpdate(userData)
+      .then(() => {
+        console.log("profile updated");
+      })
+      .then((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="row mx-auto col-12 p-lg-5 p-3">
       <div className="col-lg-6 col-md-12 col-12">

@@ -1,18 +1,24 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../images/login-security.png";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { AuthContext } from "../context/UserContext";
 
 const LogIn = () => {
+  let navigate = useNavigate();
+
+  let location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
+
   const { loggedInUser, signInWithGoogle, signInWithGitHub } =
     useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
-    const fullName = form.fullName.value;
+    const fullName = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     // console.log(photo, email, password);
@@ -21,6 +27,8 @@ const LogIn = () => {
     loggedInUser(email, password)
       .then((result) => {
         const user = result.user;
+        form.reset();
+        navigate(from, { replace: true });
         console.log(user);
       })
       .catch((error) => {
@@ -37,6 +45,8 @@ const LogIn = () => {
           <h2 className="my-3 fw-bold">Log In</h2>
           <div class="mb-3">
             <input
+              required
+              name="name"
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
@@ -45,7 +55,9 @@ const LogIn = () => {
           </div>
           <div class="mb-3">
             <input
+              required
               type="email"
+              name="email"
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="email"
@@ -53,6 +65,8 @@ const LogIn = () => {
           </div>
           <div class="mb-3">
             <input
+              required
+              name="password"
               type="password"
               class="form-control"
               id="exampleFormControlInput1"

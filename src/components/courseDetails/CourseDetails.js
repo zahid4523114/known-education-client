@@ -39,13 +39,13 @@ const CourseDetails = () => {
                       </button>
                     )}
                   </Pdf>
-
+                  {/* 
                   <Link
                     to={`/course/detail/${id}`}
                     className="btn btn-dark  ms-0 mt-lg-0 mt-md-0 mt-3 "
                   >
                     Premium Access
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

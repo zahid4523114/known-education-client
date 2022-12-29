@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
+import { AuthContext } from "../context/UserContext";
 
 const Header = () => {
+  const { user, signOutUser } = useContext(AuthContext);
   return (
     <div>
-      <nav class="navbar   p-3 navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar  p-3 navbar-expand-lg bg-body-tertiary">
         <div class="container d-lg-flex justify-content-lg-center align-items-lg-center">
           <Link class="navbar-brand fs-4 fw-bold" href="#">
             Known
@@ -53,11 +55,19 @@ const Header = () => {
                   Contact
                 </Link>
               </li>
-              <li class="ms-lg-5 nav-item">
-                <Link to="/logIn" class="nav-link fw-bold" href="#">
-                  Log In
-                </Link>
-              </li>
+              {user?.email ? (
+                <li class="ms-lg-5 nav-item">
+                  <Link onClick={signOutUser} class="nav-link fw-bold" href="#">
+                    <span>Log Out</span>
+                  </Link>
+                </li>
+              ) : (
+                <li class="ms-lg-5 nav-item">
+                  <Link to="/logIn" class="nav-link fw-bold" href="#">
+                    Log In
+                  </Link>
+                </li>
+              )}
             </ul>
             <span
               style={{

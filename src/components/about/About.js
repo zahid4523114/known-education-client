@@ -9,8 +9,12 @@ import { BsGithub } from "react-icons/bs";
 import { AuthContext } from "../context/UserContext";
 
 const About = () => {
-  const { registerUser, signInWithGoogle, signInWithGitHub } =
-    useContext(AuthContext);
+  const {
+    registerUser,
+    signInWithGoogle,
+    signInWithGitHub,
+    userProfileUpdate,
+  } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -18,7 +22,7 @@ const About = () => {
     e.preventDefault();
     const form = e.target;
     const photo = form.photo.value;
-    const fullName = form.fullName.value;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     // console.log(photo, email, password);
@@ -27,6 +31,7 @@ const About = () => {
     registerUser(email, password)
       .then((result) => {
         const user = result.user;
+        handleProfileUpdate(name, photo);
         form.reset();
         navigate("/home");
         console.log(user);
@@ -35,6 +40,18 @@ const About = () => {
         console.log(error);
       });
   };
+
+  const handleProfileUpdate = (name, image) => {
+    const userData = { displayName: name, photoURL: image };
+    userProfileUpdate(userData)
+      .then(() => {
+        console.log("profile updated");
+      })
+      .then((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div
       data-aos="fade-up"
@@ -58,8 +75,11 @@ const About = () => {
           <div className="ms-3">
             <h3 className="fw-bold">Professional Trainers</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              id odio sequi commodi perferendis non eius, autem dicta in at!
+              In the simplest terms, a professional trainer is essentially a
+              teacher who works in a corporate setting. Rather than providing
+              conventional education to children and teenagers, they instead
+              provide both mandatory and optional training for the benefit of
+              employees at every level.
             </p>
           </div>
         </div>
@@ -76,8 +96,9 @@ const About = () => {
           <div className="ms-3">
             <h3 className="fw-bold">International Certifications</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              id odio sequi commodi perferendis non eius, autem dicta in at!
+              An international certification standard outlines the requirements
+              and specifications a product, process or service must meet to
+              ensure its quality is consistent from country to country.
             </p>
           </div>
         </div>
@@ -94,8 +115,9 @@ const About = () => {
           <div className="ms-3">
             <h3 className="fw-bold">Free for 3 months</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              id odio sequi commodi perferendis non eius, autem dicta in at!
+              Get 3 months of Premium for free. Choose PayPal from the dropdown
+              at checkout to sign up quickly and securely. $9.99/month after
+              trial. Cancel anytime.
             </p>
           </div>
         </div>
