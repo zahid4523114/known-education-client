@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div data-aos="fade-down" className="card-container">
       <div className="">
-        <div class="card" style={{ width: "20rem" }}>
+        <div class="card border-0 shadow-lg" style={{ width: "20rem" }}>
           <h1 className="p-3 bg-success text-white">01</h1>
           <div class="card-body py-5 ">
             <h3 className="fw-bold ">Trending courses</h3>
@@ -18,7 +18,7 @@ const Services = () => {
         </div>
       </div>
       <div className="">
-        <div class="card" style={{ width: "20rem" }}>
+        <div class="card border-0 shadow-lg" style={{ width: "20rem" }}>
           <h1 className="p-3 bg-success text-white">02</h1>
           <div class="card-body py-5 ">
             <h3 className="fw-bold ">Tech&Technology</h3>
@@ -31,7 +31,7 @@ const Services = () => {
         </div>
       </div>
       <div className="">
-        <div class="card" style={{ width: "20rem" }}>
+        <div class="card border-0 shadow-lg" style={{ width: "20rem" }}>
           <h1 className="p-3 bg-success text-white">03</h1>
           <div class="card-body py-5 ">
             <h3 className="fw-bold ">Certified Teacher</h3>
