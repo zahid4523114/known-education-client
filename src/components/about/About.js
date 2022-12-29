@@ -147,6 +147,7 @@ const About = () => {
         </div>
         <div class="mb-3">
           <input
+            name="email"
             type="email"
             class="form-control"
             id="exampleFormControlInput1"
