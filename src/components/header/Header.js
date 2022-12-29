@@ -5,7 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 const Header = () => {
   return (
     <div>
-      <nav class="navbar sticky-top p-3 navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar   p-3 navbar-expand-lg bg-body-tertiary">
         <div class="container d-lg-flex justify-content-lg-center align-items-lg-center">
           <Link class="navbar-brand fs-4 fw-bold" href="#">
             Known

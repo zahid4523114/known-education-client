@@ -9,9 +9,9 @@ const Course = ({ course }) => {
       data-aos="fade-up"
       data-aos-duration="1000"
       style={{ width: "18rem" }}
-      class="card my-4 "
+      class="card my-4 border-0 shadow-lg rounded-4 "
     >
-      <img className="" src={courseThumb} alt="" />
+      <img className="rounded-top-4" src={courseThumb} alt="" />
       <div class="card-header text-center">{courseHeader}</div>
       <div class="card-body">
         <h5 class="card-title">Price: ${price}</h5>

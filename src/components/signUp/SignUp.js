@@ -15,10 +15,10 @@ const SignUp = () => {
     e.preventDefault();
     const form = e.target;
     const photo = form.photo.value;
-    const fullName = form.fullName.value;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    // console.log(photo, email, password);
+    console.log(photo, email, password, name);
 
     //sign up with email and password
     registerUser(email, password)
@@ -52,7 +52,7 @@ const SignUp = () => {
           <div class="mb-3">
             <input
               type="text"
-              name="photo"
+              name="name"
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="full name"
